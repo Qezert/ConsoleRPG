@@ -1,8 +1,8 @@
-namespace ConsoleRPG;
+namespace ConsoleRPG.Dicts;
 
-public class ZoneDicts
+public abstract class ZoneDicts
 {
-    public static readonly Dictionary<int, List<string>> MonstersInZone = new Dictionary<int, List<string>>()
+    public static readonly Dictionary<int, List<string>> MonstersInZone = new()
     {
         {1, ["goblin", "zombie", "rat"] }
     };

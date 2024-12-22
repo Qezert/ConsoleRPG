@@ -1,4 +1,4 @@
-namespace ConsoleRPG;
+namespace ConsoleRPG.Dicts;
 
 public abstract class LevelDicts
 {

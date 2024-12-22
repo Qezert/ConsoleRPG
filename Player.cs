@@ -1,3 +1,5 @@
+using ConsoleRPG.Dicts;
+
 namespace ConsoleRPG;
 
 public class Player : Character

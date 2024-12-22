@@ -1,14 +1,14 @@
 ﻿using ConsoleRPG;
 
+Zone z1 = new Zone(1, null, null, null);
 Player pc = Player.getInstance(25, 20);
-Monster m1 = new Monster("goblin", 9, 1, 5, 50);
 
 Console.WriteLine($"You have {pc.health} Health, {pc.mana} Mana, and {pc.experience} Experience.");
 
 Console.WriteLine("Press any key to fight your first monster!");
 Console.ReadKey();
 
-Console.WriteLine("It's a small goblin!");
+Monster m1 = z1.SpawnMonster();
 
 while (m1.Health > 0 && pc.health > 0)
 {
