@@ -12,10 +12,10 @@ Monster m1 = z1.SpawnMonster();
 
 while (m1.Health > 0 && pc.health > 0)
 {
+    Console.WriteLine("Press enter to attack!");
+    Console.ReadLine();
     m1.TakeDamage(pc.Attack());
     pc.TakeDamage(m1.Attack());
-    Console.WriteLine("Press enter to keep fighting!");
-    Console.ReadLine();
 }
 
 if (pc.health > 0)
