@@ -1,6 +1,6 @@
 namespace ConsoleRPG;
 
-public class Monster(int health, int minDamage, int maxDamage, int experience) : Character(health)
+public class Monster(string type, int health, int minDamage, int maxDamage, int experience) : Character(health)
 {
     public int Health = health;
 
@@ -9,7 +9,7 @@ public class Monster(int health, int minDamage, int maxDamage, int experience) :
     {
         Random random = new Random();
         int damage = random.Next(minDamage, maxDamage);
-        Console.WriteLine($"The monster deals {damage} damage!");
+        Console.WriteLine($"The {type} deals {damage} damage!");
         return damage;
 
     }
@@ -21,7 +21,7 @@ public class Monster(int health, int minDamage, int maxDamage, int experience) :
 
     public int Die(int health)
     {
-        Console.WriteLine($"You defeated the monster with {health} health left!");
+        Console.WriteLine($"You defeated the {type} with {health} health left!");
         return experience;
     }
 }

@@ -1,7 +1,7 @@
 ﻿using ConsoleRPG;
 
 Player pc = Player.getInstance(25, 20);
-Monster m1 = new Monster(9, 1, 5, 50);
+Monster m1 = new Monster("goblin", 9, 1, 5, 50);
 
 Console.WriteLine($"You have {pc.health} Health, {pc.mana} Mana, and {pc.experience} Experience.");
 
