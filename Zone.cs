@@ -1,17 +1,22 @@
+using ConsoleRPG.Dicts;
+
 namespace ConsoleRPG;
 
-public class Zone(Zone previous, Zone next, Monster? boss)
+public class Zone(int id, Zone previous, Zone next, Monster? boss)
 {
     private Zone _previous = previous;
     private Zone _next = next;
 
     public Monster? Boss = boss;
-
-    //TODO: Base the spawn on monster dict instead of parameter
-    public Monster SpawnMonster(string name, int hp, int min, int max, int exp)
+    
+    public Monster SpawnMonster()
     {
-        Monster monster = new Monster(name, hp, min, max, exp);
-        Console.WriteLine($"You encounter a {name}!");
+        List<string> monsterNames = ZoneDicts.MonstersInZone[id];
+        Random random = new Random();
+        int monsterIndex = random.Next(monsterNames.Count);
+        string monsterName = monsterNames[monsterIndex];
+        Monster monster = new Monster(monsterName);
+        Console.WriteLine($"You encounter a {monsterName}!");
         return monster;
     }
 

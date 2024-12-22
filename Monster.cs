@@ -1,14 +1,18 @@
-namespace ConsoleRPG;
+using System.Runtime.InteropServices.ComTypes;
 
-public class Monster(string type, int health, int minDamage, int maxDamage, int experience) : Character(health)
+namespace ConsoleRPG;
+using ConsoleRPG.Dicts;
+
+public class Monster(string type) : Character(MonsterDicts.monsterStats[type].health)
 {
-    public int Health = health;
+    private readonly (int health, int min, int max, int exp) _stats = MonsterDicts.monsterStats[type];
+    public int Health;
 
 
     public override int Attack()
     {
         Random random = new Random();
-        int damage = random.Next(minDamage, maxDamage);
+        int damage = random.Next(_stats.min, _stats.max);
         Console.WriteLine($"The {type} deals {damage} damage!");
         return damage;
 
@@ -22,6 +26,6 @@ public class Monster(string type, int health, int minDamage, int maxDamage, int 
     public int Die(int health)
     {
         Console.WriteLine($"You defeated the {type} with {health} health left!");
-        return experience;
+        return _stats.exp;
     }
 }
