@@ -54,7 +54,7 @@ public class Player : Character
     private void LevelUp()
     {
         this.level++;
-        this.maxHealth = LevelDicts.LevelExp[this.level];
+        this.maxHealth += 5;
         this.health = this.maxHealth;
         this.maxMana += 5;
         this.mana = this.maxMana;

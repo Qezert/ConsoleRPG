@@ -20,8 +20,7 @@ while (m1.Health > 0 && pc.health > 0)
 
 if (pc.health > 0)
 {
-    Console.WriteLine($"You defeated the goblin with {pc.health} health remaining!");
-    int exp = m1.Die();
+    int exp = m1.Die(pc.health);
     pc.ReceiveExperience(exp);
 }
 else

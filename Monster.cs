@@ -19,8 +19,9 @@ public class Monster(int health, int minDamage, int maxDamage, int experience) :
         Health -= damage;
     }
 
-    public int Die()
+    public int Die(int health)
     {
+        Console.WriteLine($"You defeated the monster with {health} health left!");
         return experience;
     }
 }
