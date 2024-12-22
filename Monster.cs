@@ -6,7 +6,7 @@ using ConsoleRPG.Dicts;
 public class Monster(string type) : Character(MonsterDicts.monsterStats[type].health)
 {
     private readonly (int health, int min, int max, int exp) _stats = MonsterDicts.monsterStats[type];
-    public int Health;
+    public int Health = MonsterDicts.monsterStats[type].health;
 
 
     public override int Attack()
