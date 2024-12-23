@@ -18,7 +18,7 @@ public class Monster(string type) : Character(MonsterDicts.monsterStats[type].he
 
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
         Health -= damage;
     }

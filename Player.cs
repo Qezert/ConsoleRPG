@@ -38,7 +38,7 @@ public class Player : Character
         return damage;
     }
 
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
         health -= damage;
         Console.WriteLine($"You now have {health} health");

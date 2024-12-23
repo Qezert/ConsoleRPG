@@ -6,8 +6,5 @@ public abstract class Character(int health)
 
     public abstract int Attack();
 
-    private void TakeDamage(int damage)
-    {
-        this._health -= damage;
-    }
+    public abstract void TakeDamage(int damage);
 }
