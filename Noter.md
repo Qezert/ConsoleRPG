@@ -8,9 +8,7 @@ Turn based spells (Skip their turn)
 
 # Currently working on
 
-Encapsulating combat into its own function. 
-
-Trying to allow for 
+Encapsulating combat into its own function.
 
 # Reflections
 
