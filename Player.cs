@@ -60,5 +60,7 @@ public class Player : Character
         this.health = this.maxHealth;
         this.maxMana += 5;
         this.mana = this.maxMana;
+        Console.WriteLine($"You leveled up! \n You are now level {this.level}.");
+        Console.WriteLine($"You have been healed to {this.health} health and {this.mana} Mana..");
     }
 }
