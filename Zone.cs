@@ -20,6 +20,4 @@ public class Zone(int id, Zone previous, Zone next, Monster? boss)
         return monster;
     }
 
-    
-    // Dict over which monsters the zone contains
 }
