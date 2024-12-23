@@ -16,7 +16,7 @@ public class Zone(int id, Zone previous, Zone next, Monster? boss)
         int monsterIndex = random.Next(monsterNames.Count);
         string monsterName = monsterNames[monsterIndex];
         Monster monster = new Monster(monsterName);
-        Console.WriteLine($"You encounter a {monsterName}!");
+        Console.WriteLine($"\nYou encounter a {monsterName}!");
         return monster;
     }
 

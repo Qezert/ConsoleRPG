@@ -25,7 +25,7 @@ public class Monster(string type) : Character(MonsterDicts.monsterStats[type].he
 
     public int Die(int health)
     {
-        Console.WriteLine($"You defeated the {type} with {health} health left!");
+        Console.WriteLine($"\nYou defeated the {type} with {health} health left!");
         return _stats.exp;
     }
 }

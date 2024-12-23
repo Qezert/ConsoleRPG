@@ -5,7 +5,7 @@ bool RunFight(Monster m, Player p)
     // Executing combat
     while (m.Health > 0 && p.health > 0)
     {
-        Console.WriteLine("> Press enter to attack!");
+        Console.WriteLine("\n> Press enter to attack!");
         Console.ReadLine();
         m.TakeDamage(p.Attack());
         p.TakeDamage(m.Attack());
@@ -36,5 +36,5 @@ Monster m1 = z1.SpawnMonster();
 
 if (!RunFight(m1, pc)) return; 
 
-Console.WriteLine("Press enter to end the game");
+Console.WriteLine("\nPress enter to end the game");
 Console.ReadLine();
