@@ -1,4 +1,5 @@
 using ConsoleRPG.Dicts;
+using ConsoleRPG.Spells;
 
 namespace ConsoleRPG;
 
@@ -36,6 +37,11 @@ public class Player : Character
         int damage = rnd.Next(this.level, this.level + 3);
         Console.WriteLine($"You deal {damage} damage!");
         return damage;
+    }
+
+    public void Cast(Spell spell, Character target)
+    {
+        spell.CastSpell(this, target);
     }
 
     public override void TakeDamage(int damage)
