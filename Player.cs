@@ -11,6 +11,7 @@ public class Player : Character
     public int mana;
     public int experience;
     private int level;
+    public List<Spell> spells;
 
     private static Player instance;
 
@@ -23,6 +24,7 @@ public class Player : Character
         experience = 0;
         level = 1;
         instance = this;
+        spells = new List<Spell>();
     }
 
     public static Player getInstance(int _health, int _mana)
@@ -68,5 +70,10 @@ public class Player : Character
         this.mana = this.maxMana;
         Console.WriteLine($"You leveled up! \n You are now level {this.level}.");
         Console.WriteLine($"You have been healed to {this.health} health and {this.mana} Mana..");
+    }
+
+    public void LearnSpell(Spell spell)
+    {
+        this.spells.Add(spell);
     }
 }
