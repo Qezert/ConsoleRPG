@@ -1,3 +1,18 @@
+# **NOTICE**
+
+The game is still very much under development. As of now, most features of the game are not implemented.
+This is mostly a pet project, so there is no guarantee as to when I will implement more features.
+
+## Current features:
+
+**Currently** the game features:
+- "Click to proceed" combat.
+- Multiple enemies.
+- A single zone.
+- A few levels, but no other progression.
+
+What is listed below is an attempt at describing the future, finished game.
+
 # A console RPG heavily inspired by Diablo II
 
 Play this Diablo II inspired console RPG, and experience a very lightweight version with similar core gameplay.
