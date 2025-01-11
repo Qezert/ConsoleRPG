@@ -29,12 +29,12 @@ Player pc = Player.getInstance(25, 20);
 
 Console.WriteLine($"You have {pc.health} Health, {pc.mana} Mana, and {pc.experience} Experience.");
 
-Console.WriteLine("Press any key to fight your first monster!");
+Console.WriteLine("> Press any key to fight your first monster!");
 Console.ReadKey();
 
 Monster m1 = z1.SpawnMonster();
 
 if (!RunFight(m1, pc)) return; 
 
-Console.WriteLine("\nPress enter to end the game");
+Console.WriteLine("\n> Press enter to end the game");
 Console.ReadLine();
