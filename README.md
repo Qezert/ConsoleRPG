@@ -6,7 +6,7 @@ This is mostly a pet project, so there is no guarantee as to when I will impleme
 ## Current features:
 
 **Currently** the game features:
-- "Click to proceed" combat.
+- Combat with the option to cast Fire Bolt or attack.
 - Multiple enemies.
 - A single zone.
 - A few levels, but no other progression.
