@@ -11,7 +11,7 @@ public class Player : Character
     public int mana;
     public int experience;
     private int level;
-    public List<Spell> spells;
+    public Dictionary<string, Spell> spells;
 
     private static Player instance;
 
@@ -24,7 +24,7 @@ public class Player : Character
         experience = 0;
         level = 1;
         instance = this;
-        spells = new List<Spell>();
+        spells = new Dictionary<string, Spell>() {{"Fire Bolt", new FireBolt()}};
     }
 
     public static Player getInstance(int _health, int _mana)
@@ -37,7 +37,7 @@ public class Player : Character
     {
         Random rnd = new Random();
         int damage = rnd.Next(this.level, this.level + 3);
-        Console.WriteLine($"You deal {damage} damage!");
+        Console.WriteLine($"\nYou deal {damage} damage!");
         return damage;
     }
 
@@ -74,6 +74,6 @@ public class Player : Character
 
     public void LearnSpell(Spell spell)
     {
-        this.spells.Add(spell);
+        this.spells.Add(spell.Name, spell);
     }
 }

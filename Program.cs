@@ -2,13 +2,30 @@
 
 bool RunFight(Monster m, Player p)
 {
+    
     // Executing combat
-    while (m.Health > 0 && p.health > 0)
+    while (p.health > 0)
     {
-        Console.WriteLine("\n> Press enter to attack!");
-        Console.ReadLine();
-        m.TakeDamage(p.Attack());
-        p.TakeDamage(m.Attack());
+        // Print input prompt for player
+        Console.WriteLine("\n> 1: Attack \n> 2: Use Fire Bolt");
+    
+        // Get int from player
+        int playerAction = PlayerController.GetPlayerAction(p);
+        
+        if (playerAction == 1)
+        {
+            m.TakeDamage(p.Attack());
+        } else if (playerAction == 2)
+        {
+            p.Cast(p.spells["Fire Bolt"], m);
+            Console.WriteLine($"\nYou now have {p.mana} mana");
+        }
+
+        if (m.Health > 0)
+        {
+            p.TakeDamage(m.Attack());
+        }
+        else break;
     }
 
     // Player survived combat
